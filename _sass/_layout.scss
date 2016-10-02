@@ -2,8 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    padding: 30px 60px;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -11,22 +10,15 @@
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
+    img {
+        max-width: 350px;
     }
 }
 
 .site-nav {
     float: right;
     line-height: 56px;
+    margin-top: 10px;
 
     .menu-icon {
         display: none;
@@ -39,6 +31,8 @@
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
+            border-right: 1px solid #000;
+            padding-right: 20px;
         }
     }
 
@@ -168,7 +162,8 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: 0;
+    margin-bottom: 200px;
 }
 
 .page-heading {
@@ -195,48 +190,94 @@
 }
 
 
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
+/* section styles */
+h2.section-hed {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+p.section-intro {
+    font-size: 14px;  
+    text-align: center;
+    margin-bottom: 30px; 
 }
 
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+.row {
+    max-width: 960px;
+    margin: 0 auto;
 }
+
+.row-item {
+    display: inline-block; 
+    text-align: center;
+    vertical-align: top;
+}
+
+.row-item img {
+    width: 140px;
+}
+
+.row-item p {
+    font-size: 13px;
+    margin: 0 auto;
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+
+/* hero styles */
+
+.hero {
+    background: url("../assets/hero.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 130px);
+    position: relative;
+}
+
+.hero-text {
+    font-size: 44px;
+    color: #fff;
+    max-width: 600px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    border-bottom: 8px solid #adcb89;
+    padding-bottom: 5px;
+    display: inline;
+    font-weight: 500;
+}
+
+/* our services styles */
+
+.our-services {
+    padding: 60px 0;
+}
+
+.our-services .row-item {
+    width: calc(20% - 5px);
+}
+
+.our-services .row-item p {
+    max-width: 100px;
+}
+
+/* experience styles*/
+
+.our-experience .row-item {
+    width: calc(33.3333% - 25px);
+    border: 1px solid #adcb88;
+    padding: 6px 0 15px 0;
+    margin-right: 20px;
+}
+
+.our-experience .row-item:last-child {
+    margin-right: 0;
+}
+
