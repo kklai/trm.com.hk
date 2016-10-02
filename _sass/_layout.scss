@@ -94,6 +94,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    font-size: 12px;
 }
 
 .footer-heading {
@@ -108,10 +109,11 @@
 }
 
 .footer-col-wrapper {
-    font-size: 15px;
+    font-size: 13px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+    margin-left: 0;
+    padding: 0 30px;
+    list-style: none;
 }
 
 .footer-col {
@@ -191,10 +193,15 @@
 
 
 /* section styles */
+.section {
+    padding: 60px 0;
+}
+
 h2.section-hed {
     text-align: center;
     font-weight: 700;
     margin-bottom: 0;
+    font-size: 18px;
 }
 
 p.section-intro {
@@ -215,7 +222,7 @@ p.section-intro {
 }
 
 .row-item img {
-    width: 140px;
+    // width: 140px;
 }
 
 .row-item p {
@@ -256,12 +263,12 @@ p.section-intro {
 
 /* our services styles */
 
-.our-services {
-    padding: 60px 0;
-}
-
 .our-services .row-item {
-    width: calc(20% - 5px);
+    width: calc(20% - 25px);
+    margin-right: 20px
+}
+.our-services .row-item:last-child {
+    margin-right: 0;
 }
 
 .our-services .row-item p {
@@ -281,3 +288,68 @@ p.section-intro {
     margin-right: 0;
 }
 
+/* trusted businesses */
+.businesses .row-item {
+    width: calc(20% - 45px);
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.businesses .row-item:last-child {
+    margin-right: 0;
+}
+
+.businesses .row-item img { 
+    width: 100%;
+}
+
+/* about */
+
+.about.hero {
+    background: url("../assets/team.jpg") no-repeat center center; 
+    background-size: 100%;
+}
+
+.words-from-director {
+    max-width: 500px;
+    margin: 0 auto;
+    .section-hed {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .signature {
+        width: 150px;
+        margin-top: 20px;
+    }
+}
+
+.leadership {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .leader-box {
+        margin-bottom: 25px;
+        img {
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+        .leader-box-text {
+            width: calc(70% - 15px);
+            display: inline-block;
+            vertical-align: top;
+            font-size: 13px;
+        }
+    }
+}
+
+/* workflow */
+
+.workflow.hero {
+    background: url("../assets/workflow.jpg") no-repeat center center; 
+    background-size: 100%;
+}
