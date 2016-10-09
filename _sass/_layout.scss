@@ -34,6 +34,10 @@
             border-right: 1px solid #000;
             padding-right: 20px;
         }
+        &:hover {
+            text-decoration: none;
+            opacity: 0.6;
+        }
     }
 
     @include media-query($on-palm) {
@@ -225,6 +229,14 @@ p.section-intro {
     // width: 140px;
 }
 
+.row-item .img-wrapper {
+    border: 2px solid #adcb89;
+    padding: 5px 10px;
+    img {
+        width: 50%;
+    }
+}
+
 .row-item p {
     font-size: 13px;
     margin: 0 auto;
@@ -264,7 +276,7 @@ p.section-intro {
 /* our services styles */
 
 .our-services .row-item {
-    width: calc(20% - 25px);
+    width: calc(20% - 20px);
     margin-right: 20px
 }
 .our-services .row-item:last-child {
@@ -279,7 +291,7 @@ p.section-intro {
 
 .our-experience .row-item {
     width: calc(33.3333% - 25px);
-    border: 1px solid #adcb88;
+    border: 2px solid #adcb88;
     padding: 6px 0 15px 0;
     margin-right: 20px;
 }
@@ -352,4 +364,9 @@ p.section-intro {
 .workflow.hero {
     background: url("../assets/workflow.jpg") no-repeat center center; 
     background-size: 100%;
+}
+
+.page-active span {
+    border-bottom: 2px solid #adcb89;
+    padding-bottom: 5px;
 }
