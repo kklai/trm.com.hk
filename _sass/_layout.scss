@@ -40,6 +40,17 @@
         }
     }
 
+    .page-active {
+        &:hover {
+            opacity: 1;
+            cursor: default !important;
+        }
+        span {
+            border-bottom: 2px solid #adcb89;
+            padding-bottom: 5px;
+        }
+    }
+
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
@@ -169,7 +180,6 @@
  */
 .page-content {
     padding: 0;
-    margin-bottom: 200px;
 }
 
 .page-heading {
@@ -204,8 +214,8 @@
 h2.section-hed {
     text-align: center;
     font-weight: 700;
-    margin-bottom: 0;
-    font-size: 18px;
+    margin-bottom: 5px;
+    font-size: 22px;
 }
 
 p.section-intro {
@@ -289,6 +299,10 @@ p.section-intro {
 
 /* experience styles*/
 
+.our-experience {
+    background: rgba(197, 226, 224, 0.18);
+}
+
 .our-experience .row-item {
     width: calc(33.3333% - 25px);
     border: 2px solid #adcb88;
@@ -364,9 +378,4 @@ p.section-intro {
 .workflow.hero {
     background: url("../assets/workflow.jpg") no-repeat center center; 
     background-size: 100%;
-}
-
-.page-active span {
-    border-bottom: 2px solid #adcb89;
-    padding-bottom: 5px;
 }
