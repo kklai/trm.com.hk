@@ -208,7 +208,7 @@
 
 /* section styles */
 .section {
-    padding: 60px 0;
+    padding: 60px 10px;
 }
 
 h2.section-hed {
@@ -333,7 +333,7 @@ p.section-intro {
 
 .about.hero {
     background: url("../assets/team.jpg") no-repeat center center; 
-    background-size: 100%;
+    background-size: cover;
 }
 
 .words-from-director {
@@ -377,7 +377,7 @@ p.section-intro {
 
 .workflow.hero {
     background: url("../assets/workflow.jpg") no-repeat center center; 
-    background-size: 100%;
+    background-size: cover;
 }
 
 
@@ -387,6 +387,16 @@ p.section-intro {
 @include media-query($on-laptop) {
     .site-nav {
         top: 5px;
+        z-index: 100;
+
+        .page-link {
+            text-align: center;
+            margin-left: 0px;
+            padding: 5px 20px;
+        }
+        .page-link:not(:last-child) {
+            border-right: 0;
+        }
     }
     .site-title img {
         max-width: 220px;
@@ -401,13 +411,13 @@ p.section-intro {
     }
 
     .our-services .row-item {
-        width: calc(50% - 32px);
+        width: calc(50% - 22px);
         margin-right: 20px;
         &:nth-child(even) {
             margin-right: 0;
         }
         &:nth-child(odd) {
-            margin-left: 20px;
+            margin-left: 10px;
         }
         p {
             margin-bottom: 22px;
@@ -420,13 +430,13 @@ p.section-intro {
         margin-left: 8px;
     }
     .businesses .row-item {
-        width: calc(50% - 35px);
+        width: calc(50% - 20px);
         margin-right: 10px;
         &:nth-child(even) {
             margin-right: 0;
         }
         &:nth-child(odd) {
-            margin-left: 20px;
+            margin-left: 10px;
         }
     }
 }
