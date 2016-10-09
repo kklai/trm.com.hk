@@ -379,3 +379,55 @@ p.section-intro {
     background: url("../assets/workflow.jpg") no-repeat center center; 
     background-size: 100%;
 }
+
+
+
+// mobile styles
+
+@include media-query($on-laptop) {
+    .site-nav {
+        top: 5px;
+    }
+    .site-title img {
+        max-width: 220px;
+    }
+    .site-header {
+        padding: 10px 12px;
+    }
+    .hero-text {
+        font-size: 32px;
+        left: 10px;
+        max-width: 300px;
+    }
+
+    .our-services .row-item {
+        width: calc(50% - 32px);
+        margin-right: 20px;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        &:nth-child(odd) {
+            margin-left: 20px;
+        }
+        p {
+            margin-bottom: 22px;
+            margin-top: 7px;
+        }
+    }
+    .our-experience .row-item {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+        margin-left: 8px;
+    }
+    .businesses .row-item {
+        width: calc(50% - 35px);
+        margin-right: 10px;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        &:nth-child(odd) {
+            margin-left: 20px;
+        }
+    }
+}
+
