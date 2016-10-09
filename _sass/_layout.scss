@@ -209,6 +209,8 @@
 /* section styles */
 .section {
     padding: 60px 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 h2.section-hed {
@@ -281,6 +283,10 @@ p.section-intro {
     padding-bottom: 5px;
     display: inline;
     font-weight: 500;
+}
+
+.index-wrapper .section {
+    max-width: none;
 }
 
 /* our services styles */
@@ -377,6 +383,30 @@ p.section-intro {
 
 .workflow.hero {
     background: url("../assets/workflow.jpg") no-repeat center center; 
+    background-size: cover;
+}
+
+.workflow {
+    .section-subhed {
+        font-weight: 500;
+        margin-bottom: 4px;
+        margin-top: 40px;
+        &:before {
+            display: inline-block;
+            content: "";
+            background-image: url("../assets/arrow.png");
+            background-size: 15px;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+    }
+}
+
+/* contact */
+
+.contact.hero {
+    background: url("../assets/contact.png") no-repeat center center; 
     background-size: cover;
 }
 
